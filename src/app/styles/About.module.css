@@ -1,0 +1,26 @@
+.aboutmain{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-radius: 10px;
+    box-shadow: 1px 1px 36px 3px rgba(255, 255, 255, 0.5);
+    backdrop-filter:saturation(180) blur(20px); 
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+    height: 95vh;
+    margin-top: 65px;
+}
+
+.aboutmain h1{
+    padding: 20px 20px 20px 30px ;
+    width: 48%;
+    font-size: 12vh;
+    color: #EFE4E4;
+}
+
+.aboutmain p{
+    padding: 20px 30px 20px 20px ;
+    font-size: 4vh;
+    width: 48%;
+    text-align: center;
+}

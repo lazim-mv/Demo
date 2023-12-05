@@ -57,7 +57,7 @@ function BottomCard() {
     <motion.bottomcardmain className={styles.bottomcardmain}>
       <div className={styles.bottomScroll}>
         {adImageIndices.map((index) => (
-          <motion.div>
+          <motion.div key={index}>
             <Image
               src={`/cctv${index + 1}.webp`}
               layout="responsive"
