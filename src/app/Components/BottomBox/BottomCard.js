@@ -54,52 +54,45 @@ function BottomCard() {
   const adImageIndices = [0, 1, 2, 3];
 
   return (
-    <motion.bottomcardmain
-      className={styles.bottomcardmain}
-      variants={container}
-      initial="hidden"
-      animate="visible"
-    >
-      {adImageIndices.map((index) => (
-        <motion.div
-          key={index}
-          className={styles.adImageContainer}
-          variants={item}
-        >
-          <Image
-            src={`/cctv${index + 1}.webp`}
-            layout="responsive"
-            width={109}
-            height={100}
-            className={styles.bottomCardImage}
-            objectFit="contain"
-            objectPosition="center"
-            alt={`ImageFooter${index + 1}`}
-            quality={100}
-            loading="lazy"
-            unoptimized
-          />
-        </motion.div>
-      ))}
+    <motion.bottomcardmain className={styles.bottomcardmain}>
+      <div className={styles.bottomScroll}>
+        {adImageIndices.map((index) => (
+          <motion.div>
+            <Image
+              src={`/cctv${index + 1}.webp`}
+              layout="responsive"
+              width={109}
+              height={100}
+              className={styles.bottomCardImage}
+              objectFit="contain"
+              objectPosition="center"
+              alt={`ImageFooter${index + 1}`}
+              quality={100}
+              loading="lazy"
+              unoptimized
+            />
+          </motion.div>
+        ))}
 
-      <motion.div className={styles.btnContainer} variants={item}>
-        <a className={styles.btn}>
-          Lorem ipsum dolor
-          <Image
-            src="/cctv.svg"
-            layout="responsive"
-            width={24}
-            height={24}
-            className={styles.bottomCardImage}
-            objectFit="contain"
-            objectPosition="center"
-            alt="ImageFooter1"
-            quality={100}
-            loading="lazy"
-            unoptimized
-          />
-        </a>
-      </motion.div>
+        <motion.div className={styles.btnContainer} variants={item}>
+          <a className={styles.btn}>
+            Products
+            <Image
+              src="/cctv.svg"
+              layout="responsive"
+              width={24}
+              height={24}
+              className={styles.bottomCardImage}
+              objectFit="contain"
+              objectPosition="center"
+              alt="ImageFooter1"
+              quality={100}
+              loading="lazy"
+              unoptimized
+            />
+          </a>
+        </motion.div>
+      </div>
     </motion.bottomcardmain>
   );
 }

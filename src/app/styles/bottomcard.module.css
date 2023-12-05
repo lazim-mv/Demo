@@ -20,16 +20,6 @@
     height: var(--cube-size);
 }
 
-.adImageContainer{
-    width: 89px;
-    height: 80px;
-    position: relative;
-}
-
-.adImageContainer:hover{
-    cursor: pointer;
-}
-
 .btnContainer:hover{
     cursor: pointer;
 }
@@ -45,6 +35,16 @@
 .btnContainer a img{
     height: 34px !important;
     width: 34px !important;
+}
+
+.adImageContainer{
+    width: 89px;
+    height: 80px;
+    position: relative;
+}
+
+.adImageContainer:hover{
+    cursor: pointer;
 }
 
 .bottomCardImage{
@@ -65,4 +65,60 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.bottomScroll{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+    .bottomcardmain {
+        width: 95vw;
+        align-self: center;
+        border-radius: 0;
+    }
+
+    .bottomScroll{
+        width: 125vw;
+        padding-right: 100px;
+        padding-left: 30px;
+        display: flex;
+        overflow: scroll;
+        flex-direction: row-reverse;
+    }
+
+    .btnContainer{
+        width: 150px;
+        height: 65px;
+        /* border-radius: 0; */
+        padding: 0 20px;
+    }
+
+    .btnContainer a{
+        font-size: 10px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btnContainer a img{
+        height: 17px !important;
+        width: 17px !important;
+    }
+
+    .adImageContainer{
+        width: 69px;
+        height: 60px;
+    }
+
+    .bottomCardImage{
+        width: 69px !important;
+        height: 60px !important;
+        object-fit: cover;
+        border-radius: 10px;
+    }
 }

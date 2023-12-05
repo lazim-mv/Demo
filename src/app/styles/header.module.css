@@ -39,3 +39,18 @@
     font-weight: 100;
     line-height: normal;
 }
+
+@media (max-width: 600px) {
+
+    .headermain{
+        padding-left: 10px;
+    }
+
+    .logoText{
+        font-size: 4.5vw;
+    }
+
+    .menuItems p{
+        font-size: 3.5vw;
+    }
+}

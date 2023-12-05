@@ -4,7 +4,7 @@ import styles from "../../styles/mainbox.module.css";
 function Mainbox() {
   return (
     <mainboxmain className={styles.mainboxmain}>
-      <div className={styles.contentMainBox}>
+      <div className={styles.contentMainBox} id="mainBox">
         <h1>Lorem Ipsum tor Portodor</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur. Auctor vel erat dignissim

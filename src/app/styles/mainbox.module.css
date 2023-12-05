@@ -41,3 +41,29 @@
     height: 100% !important;
 }
 
+@media (max-width: 600px) {
+    .mainboxmain {
+        flex-direction: column;
+        gap: 20px;
+        height: auto;
+        width: 95vw;
+        border-radius: 0;
+    }
+
+    .contentMainBox{
+        width: 100%;
+    }
+
+    .mainBoxImage{
+        width: 100%;
+    }
+
+    .contentMainBox h1{
+        font-size: 30px;
+    }
+
+    .contentMainBox p{
+        font-size: 14px;
+    }
+}
+
