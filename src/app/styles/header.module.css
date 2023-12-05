@@ -1,0 +1,41 @@
+
+
+
+.headermain{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    background: rgba(1, 1, 1, 1);
+
+    padding: 0 5%;
+    border-radius: 10px;
+    box-shadow: 1px 1px 36px 3px rgba(255, 255, 255, 0.5);
+    backdrop-filter:saturation(180) blur(20px); 
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+}
+
+.logo{
+    width: 20%;
+}
+
+.logoText{
+    font-size: 48px;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+.menuItems{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menuItems p{
+    color: #EFE4E4;
+    text-align: center;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 100;
+    line-height: normal;
+}

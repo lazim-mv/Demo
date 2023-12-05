@@ -1,0 +1,43 @@
+.mainboxmain{
+    height: 390px;
+
+    display: flex;
+
+    border-radius: 10px;
+    box-shadow: 1px 1px 36px 3px rgba(255, 255, 255, 0.5);
+    backdrop-filter:saturation(180) blur(20px); 
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+}
+
+.contentMainBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    width: 50%;
+    padding: 15px;
+    padding-left: 25px;
+}
+
+.contentMainBox h1{
+    color: #dfdfdf;
+    font-size: 65px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-align: center;
+}
+
+.contentMainBox p{
+    text-align: center;
+}
+
+.mainBoxImage{
+    width: 50%;
+    height: 100%;
+}
+
+.mainBoxImage img{
+    height: 100% !important;
+}
+
