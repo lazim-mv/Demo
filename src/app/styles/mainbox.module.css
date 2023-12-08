@@ -1,61 +1,71 @@
 .mainboxmain{
-    height: 390px;
-
     display: flex;
-
     border-radius: 10px;
-    box-shadow: 1px 1px 36px 3px rgba(255, 255, 255, 0.5);
     backdrop-filter:saturation(180) blur(20px); 
-    box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+    background: #393E46;
 }
 
 .contentMainBox{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     gap: 10px;
     width: 50%;
+    height: 100%;
     padding: 15px;
     padding-left: 25px;
+    overflow: hidden;
 }
 
 .contentMainBox h1{
-    color: #dfdfdf;
-    font-size: 65px;
+    text-wrap: balance;
+    text-transform: capitalize;
+    color: #f3f3f3;
+    font-size: 4vw;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-    text-align: center;
+    text-align: left;
 }
 
 .contentMainBox p{
-    text-align: center;
+    text-align: justify;
 }
 
 .mainBoxImage{
+    position: relative;
     width: 50%;
     height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .mainBoxImage img{
-    height: 100% !important;
+    object-fit: cover;
 }
 
 @media (max-width: 600px) {
     .mainboxmain {
         flex-direction: column;
         gap: 20px;
-        height: auto;
         width: 95vw;
         border-radius: 0;
     }
 
     .contentMainBox{
         width: 100%;
+        padding: 15px;
     }
 
     .mainBoxImage{
         width: 100%;
+        height: 250px;
+    }
+
+    .mainBoxImage img{
+        position: absolute;
+        
     }
 
     .contentMainBox h1{

@@ -34,46 +34,12 @@ function BottomCard() {
       opacity: 1,
     },
   };
-  const [isRotated, setIsRotated] = useState(false);
 
-  const handleAnimationComplete = () => {
-    setIsRotated((prev) => !prev);
-  };
-
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      handleAnimationComplete();
-    }, 1800);
-
-    return () => clearInterval(intervalId); // Clear the interval when the component unmounts
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  console.log(isRotated);
   const adImageIndices = [0, 1, 2, 3];
 
   return (
     <motion.bottomcardmain className={styles.bottomcardmain}>
       <div className={styles.bottomScroll}>
-        {adImageIndices.map((index) => (
-          <motion.div key={index}>
-            <Image
-              src={`/cctv${index + 1}.webp`}
-              layout="responsive"
-              width={109}
-              height={100}
-              className={styles.bottomCardImage}
-              objectFit="contain"
-              objectPosition="center"
-              alt={`ImageFooter${index + 1}`}
-              quality={100}
-              loading="lazy"
-              unoptimized
-            />
-          </motion.div>
-        ))}
-
         <motion.div className={styles.btnContainer} variants={item}>
           <a className={styles.btn}>
             Products
@@ -92,6 +58,23 @@ function BottomCard() {
             />
           </a>
         </motion.div>
+        {adImageIndices.map((index) => (
+          <motion.div key={index}>
+            <Image
+              src={`/cctv${index + 1}.webp`}
+              layout="responsive"
+              width={109}
+              height={100}
+              className={styles.bottomCardImage}
+              objectFit="contain"
+              objectPosition="center"
+              alt={`ImageFooter${index + 1}`}
+              quality={100}
+              loading="lazy"
+              unoptimized
+            />
+          </motion.div>
+        ))}
       </div>
     </motion.bottomcardmain>
   );

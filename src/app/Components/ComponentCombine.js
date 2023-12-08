@@ -2,35 +2,55 @@
 import { useEffect, useState, useRef } from "react";
 import styles from "../styles/mainCombine.module.css";
 import BottomCard from "./BottomBox/BottomCard";
-import Header from "./Header/Header";
 import Mainbox from "./MainBox/Mainbox";
 import Sidebar from "./SideBar/Sidebar";
 import Reveal from "./Reveal/Reveal";
 import About from "./About/About";
+import { motion, useScroll } from "framer-motion";
+import Products from "./Products/Products";
 
 function ComponentCombine() {
-  const element = useRef;
+  const element = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: element,
+  });
 
   return (
-    <main className={styles.Container}>
-      <Header />
-      <div className={styles.allignment}>
+    <>
+      <div className={styles.allignment} ref={element}>
         <Sidebar />
         <div className={styles.col}>
-          <Reveal width="100%" height="100%" slideColor="true">
+          <Reveal
+            width="auto"
+            animationSlideColor="true"
+            height="100%"
+            positionTop="90px"
+          >
             <div className={styles.mainScreen}>
               <Mainbox />
               <BottomCard />
             </div>
           </Reveal>
-          <Reveal width="100%">
-            <div className={styles.aboutScreen}>
-              <About />
-            </div>
+          <Reveal
+            width="auto"
+            animationSlideColor="true"
+            height="100%"
+            positionTop="90px"
+          >
+            <About />
+          </Reveal>
+          <Reveal
+            width="auto"
+            animationSlideColor="true"
+            height="100%"
+            positionTop="150px"
+          >
+            <Products />
           </Reveal>
         </div>
       </div>
-    </main>
+    </>
   );
 }
 
