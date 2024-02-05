@@ -9,7 +9,6 @@
 .col {
     display: flex;
     flex-direction: column;
-    gap: 25px;
     width: 95%;
     height: 100%;
     position: relative;

@@ -9,7 +9,7 @@
     
     overflow-y: hidden;
 
-    margin-top: 65px;
+    margin-top: 100px;
 }
 
 .scrollContainer{
@@ -25,12 +25,12 @@
 .aboutmain h1{
     padding: 20px 20px 20px 30px ;
     width: 100%;
-    font-size: 11vh;
+    font-size: 4vw;
 }
 
 .aboutmain p{
     padding: 20px 30px 20px 20px ;
-    font-size: 3.5vh;
+    font-size: 1.55vw;
     width: 100%;
     text-align: justify;
 }

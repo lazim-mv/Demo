@@ -8,6 +8,7 @@ import Reveal from "./Reveal/Reveal";
 import About from "./About/About";
 import { motion, useScroll } from "framer-motion";
 import Products from "./Products/Products";
+import Services from "./Services/Services";
 
 function ComponentCombine() {
   const element = useRef(null);
@@ -21,33 +22,13 @@ function ComponentCombine() {
       <div className={styles.allignment} ref={element}>
         <Sidebar />
         <div className={styles.col}>
-          <Reveal
-            width="auto"
-            animationSlideColor="true"
-            height="100%"
-            positionTop="90px"
-          >
-            <div className={styles.mainScreen}>
-              <Mainbox />
-              <BottomCard />
-            </div>
-          </Reveal>
-          <Reveal
-            width="auto"
-            animationSlideColor="true"
-            height="100%"
-            positionTop="90px"
-          >
-            <About />
-          </Reveal>
-          <Reveal
-            width="auto"
-            animationSlideColor="true"
-            height="100%"
-            positionTop="150px"
-          >
-            <Products />
-          </Reveal>
+          <div className={styles.mainScreen}>
+            <Mainbox />
+            <BottomCard />
+          </div>
+          <About />
+          <Products />
+          <Services />
         </div>
       </div>
     </>
